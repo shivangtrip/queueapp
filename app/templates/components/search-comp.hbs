@@ -1,0 +1,13 @@
+Enter Query: {{input key-press="search" id="searchInput" type = "text" placeholder = "Search cart.." value = itemToBeSearched}}
+<button {{action "clear"}}>Clear Search</button>
+
+
+
+<ul>
+  {{#each binu.items as |item|}}
+    <li>
+      {{item}}
+      <button {{action "remove" item}}>Remove</button>
+    </li>
+  {{/each}}
+</ul>

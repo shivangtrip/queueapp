@@ -1,0 +1,13 @@
+Enter Item And Press Enter: {{input enter="send" id="input" type = "text" placeholder = "Enter the item" value = itemToBeAdded}}
+<button {{action "clear"}}>Clear Queue</button>
+
+
+
+<ul>
+  {{#each cart.items as |item|}}
+    <li>
+      {{item}}
+      <button {{action "remove" item}}>Remove</button>
+    </li>
+  {{/each}}
+</ul>
